@@ -249,6 +249,7 @@ case $OPTION in
 		NGINX_OPTIONS="
 		--prefix=/etc/nginx \
 		--sbin-path=/usr/sbin/nginx \
+		--modules-path=/usr/lib/nginx/modules \
 		--conf-path=/etc/nginx/nginx.conf \
 		--error-log-path=/var/log/nginx/error.log \
 		--http-log-path=/var/log/nginx/access.log \
@@ -262,6 +263,7 @@ case $OPTION in
 		--with-cc-opt=-Wno-deprecated-declarations"
 
 		NGINX_MODULES="--with-threads \
+		--with-poll_module \
 		--with-file-aio \
 		--with-http_ssl_module \
 		--with-http_v2_module \
